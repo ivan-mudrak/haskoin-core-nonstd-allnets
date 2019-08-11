@@ -1,0 +1,79 @@
+name: haskoin-core
+version: 0.9.1
+synopsis: Bitcoin & Bitcoin Cash library for Haskell
+description: 'Haskoin Core is a complete Bitcoin and Bitcoin Cash library of functions and data types for Haskell developers.'
+category: Bitcoin, Finance, Network
+author:
+  - Philippe Laprade
+  - Jean-Pierre Rupp
+  - Matthew Wraith
+maintainer: xenog@protonmail.com
+license: PublicDomain
+license-file: UNLICENSE
+homepage: http://github.com/haskoin/haskoin#readme
+git: git://github.com/haskoin/haskoin.git
+bug-reports: http://github.com/haskoin/haskoin/issues
+extra-source-files:
+  - data/*.json
+  - README.md
+  - CHANGELOG.md
+dependencies:
+  - base >=4.9 && <5
+  - aeson
+  - bytestring
+  - cereal
+  - containers
+  - mtl
+  - QuickCheck
+  - split
+  - string-conversions
+  - text
+  - vector
+library:
+  source-dirs: src
+  exposed-modules:
+    - Haskoin
+    - Network.Haskoin.Address
+    - Network.Haskoin.Address.Base58
+    - Network.Haskoin.Address.CashAddr
+    - Network.Haskoin.Address.Bech32
+    - Network.Haskoin.Block
+    - Network.Haskoin.Block.Headers
+    - Network.Haskoin.Block.Merkle
+    - Network.Haskoin.Constants
+    - Network.Haskoin.Crypto
+    - Network.Haskoin.Keys
+    - Network.Haskoin.Network
+    - Network.Haskoin.Script
+    - Network.Haskoin.Test
+    - Network.Haskoin.Transaction
+    - Network.Haskoin.Transaction.Partial
+    - Network.Haskoin.Util
+  dependencies:
+    - array
+    - base16-bytestring
+    - conduit
+    - cryptonite
+    - entropy
+    - hashable
+    - memory
+    - murmur3
+    - network
+    - scientific
+    - secp256k1-haskell
+    - time
+    - transformers
+    - unordered-containers
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    verbatim:
+      build-tool-depends:
+          hspec-discover:hspec-discover
+    dependencies:
+      - hspec
+      - haskoin-core
+      - HUnit
+      - safe
+      - unordered-containers
