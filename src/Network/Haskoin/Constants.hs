@@ -37,7 +37,7 @@ import           Data.Version
 import           Data.Word                    (Word32, Word64, Word8)
 import           GHC.Generics                 (Generic)
 import           Network.Haskoin.Block.Common
-import           Paths_haskoin_core
+import           Paths_haskoin_core_nonstd_allnets
 import           Text.Read
 
 -- | Version of Haskoin Core package.
