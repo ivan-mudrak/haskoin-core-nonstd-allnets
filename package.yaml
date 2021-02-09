@@ -1,4 +1,4 @@
-name: haskoin-core
+name: haskoin-core-nonstd-allnets
 version: 0.9.1
 synopsis: Bitcoin & Bitcoin Cash library for Haskell
 description: 'Haskoin Core is a complete Bitcoin and Bitcoin Cash library of functions and data types for Haskell developers.'
